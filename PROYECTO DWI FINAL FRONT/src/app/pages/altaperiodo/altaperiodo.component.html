@@ -1,0 +1,55 @@
+<div class="container">
+	<div class="row">
+		<div _ngcontent-ksu-c2="" class="col-md-6 col-md-offset-3" style="
+			border-top-width: 0px;
+			padding-top: 30px;">
+			<div class="panel panel-login">
+				<div class="panel-heading">
+					<div class="row">
+						
+						<div class="col-xs-6">
+							<a href="#" class = "active" id="register-form-link">Alta de Periodo</a>
+						</div>
+					</div>
+					<hr>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-12">
+							<form  #Forma='ngForm' (ngSubmit)="registrarperiodo(forma)" #forma="ngForm">
+								<div class="form-group">
+									<input placeholder="Nombre del periodo" type="text " class="form-control is-valid " [ngClass]="{'is-invalid' : (!nombre.valid && nombre.touched), 'is-valid' : nombre.valid}" id="validationServer01 " name="nombre" [(ngModel)]="periodo.nombre " #nombre="ngModel"
+										required>
+									<div class="invalid-feedback ">
+										Favor de ingresar el nombre de periodo.
+									</div>
+								</div>
+							<div class="form-group">
+								<h5>Fecha de inicio</h5>
+								<input  type="date"  class="form-control is-valid " [ngClass]="{'is-invalid' : (!fechaInicio.valid && fechaInicio.touched), 'is-valid' : fechaInicio.valid}" id="validationsServer02" name="fechaInicio" [(ngModel)]="periodo.fechaInicio" #fechaInicio="ngModel" placeholder="Ingresa la fecha de inicio" required>
+								<div class="invalid-feedback ">
+									Favor de ingresar su fecha de Inicio.
+								</div>
+							</div>
+										<div class="form-group"> 
+							<h5>Fecha de termino</h5>
+							<input  type="date"  class="form-control is-valid " [ngClass]="{'is-invalid' : (!fechaFin.valid && fechaFin.touched), 'is-valid' : fechaFin.valid}" id="validationsServer02" name="fechaFin" [(ngModel)]="periodo.fechaFin" id="validationsServer03" name="fechaFin" [(ngModel)]="periodo.fechaFin" #fechaFin="ngModel" placeholder="Ingresa la fecha de termino" required>
+							<div class="invalid-feedback ">
+								Favor de ingresar su fecha de termino.
+							</div>
+						</div>
+								<div class="form-group">
+									<div class="row">
+										<div class="text-right ">
+											<button class="btn btn-success" type="submit" [disabled]="!forma.valid">Guardar</button>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,78 @@
+body {
+  padding-top: 30px;
+}
+
+.panel-login input[type="text"] {
+  height: 45px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+.panel-login input:hover,
+.panel-login input:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  border-color: #ccc;
+}
+
+.btn-register {
+  background-color: #1cb94e;
+  text-align: center;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  height: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+  border-color: #1cb94a;
+}
+.btn-register:hover,
+.btn-register:focus {
+  color: #fff;
+  background-color: #1ca347;
+  border-color: #1ca347;
+}
+
+table {
+  background-color: rgb(240, 240, 240);
+}
+
+.cTabla {
+  position: relative;
+}
+.cTabla table {
+  position: relative;
+  width: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.cTabla table td {
+  text-align: center;
+  font-size: 30px;
+}
+.cTabla table th {
+  text-align: center;
+  font-size: 30px;
+}
+.cTabla table td button {
+  width: 50px;
+}
+.btnDelete {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.btnDelete img {
+  width: 30px;
+}
+.btnEdit {
+  background: none;
+  border: none;
+}
+.btnEdit img {
+  width: 30px;
+}

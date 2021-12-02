@@ -1,0 +1,66 @@
+<div class="container">
+    	<div class="row">
+			<div _ngcontent-ksu-c2="" class="col-md-6 col-md-offset-3" style="
+				border-top-width: 0px;
+				padding-top: 30px;">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row">
+							
+							<div class="col-xs-6">
+								<a href="#" class = "active" id="register-form-link">Alta de Materia</a>
+							</div>
+						</div>
+						<hr>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form   (ngSubmit)="registrarmateria()" #forma="ngForm">
+									<div class="form-group">
+										<input placeholder="Nombre de Materia" type="text " class="form-control is-valid " [ngClass]="{'is-invalid' : (!nombre.valid && nombre.touched), 'is-valid' : nombre.valid}" id="validationServer01 " name="nombre" [(ngModel)]="materia.nombre " #nombre="ngModel"
+											required>
+										<div class="invalid-feedback ">
+											Favor de ingresar el nombre de materia.
+										</div>
+									</div>
+									<div class="form-group">
+							<h5>Numero De Unidades</h5>
+							<input placeholder="Numero de Unidades" type="text " class="form-control is-valid " [ngClass]="{'is-invalid' : (!numeroUnidades.valid && numeroUnidades.touched), 'is-valid' : numeroUnidades.valid}" id="validationServer02 " name="numeroUnidades" [(ngModel)]="materia.numeroUnidades" #numeroUnidades="ngModel"
+											required>
+										<div class="invalid-feedback ">
+											Favor de ingresar el numero de unidades.
+										</div>
+						                </div>
+
+									<div class="form-group"> 
+										<h5>Academia</h5>
+										<input placeholder="Academia" type="text " class="form-control is-valid " [ngClass]="{'is-invalid' : (!academia.valid &&  academia.touched), 'is-valid' :  academia.valid}" id="validationServer03" name="academia" [(ngModel)]="materia.academia" #academia="ngModel"
+										required>
+									<div class="invalid-feedback ">
+										Favor de ingresar academia.
+									</div>	
+									</div>
+									<div class="form-group"> 
+						        <h5>Estado</h5>
+						            <input placeholder="Estado" type="text " class="form-control is-valid " [ngClass]="{'is-invalid' : (!estado.valid &&  estado.touched), 'is-valid' :  estado.valid}" id="validationServer04" name="estado" [(ngModel)]="materia.estado" #estado="ngModel"
+						            required>
+					               <div class="invalid-feedback ">
+						             Favor de ingresar el Estado.
+					                  </div>	
+					                        </div>
+											<div class="form-group">
+											<div class="row">
+												<div class="text-right ">
+													<button class="btn btn-success" type="submit" [disabled]="!forma.valid">Guardar</button>
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

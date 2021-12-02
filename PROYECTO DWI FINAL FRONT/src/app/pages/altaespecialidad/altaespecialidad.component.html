@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="row">
+    <div
+      _ngcontent-ksu-c2=""
+      class="col-md-6 col-md-offset-3"
+      style="border-top-width: 0px; padding-top: 30px;"
+    >
+      <div class="panel panel-login">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-xs-6">
+              <a href="#" class="active" id="register-form-link"
+                >Alta de Especialidad</a
+              >
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-lg-12">
+              <form
+                id="alta-form"
+                action="Api rest de alta *********"
+                method="post"
+                role="form"
+                style="display: block;"
+              >
+                <div class="form-group">
+                  <input
+                    type="select"
+                    name="Especialidad"
+                    id="Especialidad"
+                    tabindex="1"
+                    class="form-control"
+                    placeholder="Nombre de Especialidad"
+                    value=""
+                    [(ngModel)]="especialidad"
+                  />
+                </div>
+                <select
+                  [(ngModel)]="carrera"
+                  [ngModelOptions]="{ standalone: true }"
+                  tabindex="1"
+                  class="form-control"
+                >
+                  <option value="">Seleccione la carrera</option>
+                  <option
+                    *ngFor="let carrera of carreras"
+                    value="{{ carrera._id }}"
+                  >
+                    {{ carrera.nombre }}
+                  </option>
+                </select>
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-sm-6 col-sm-offset-3">
+                      <input
+                        type="submit"
+                        name="register-submit"
+                        id="register-submit"
+                        tabindex="4"
+                        class="form-control btn btn-register"
+                        value="Guardar"
+                        (click)="registrar(especialidad, carrera)"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

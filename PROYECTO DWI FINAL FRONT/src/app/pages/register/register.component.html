@@ -1,0 +1,96 @@
+<div class="container">
+    <div class="row">
+        <div _ngcontent-ksu-c2="" class="col-md-6 col-md-offset-3" style="
+				border-top-width: 0px;
+				padding-top: 30px;">
+            <div class="panel panel-login">
+                <div class="panel-heading">
+                    <div class="row">
+
+                        <div class="col-xs-6">
+                            <a href="#" class="active" id="register-form-link">Registrate Aqui</a>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <form id="register-form" #myForm='ngForm' (ngSubmit)='registrar()' method="post" role="form" style="display: block;">
+
+                                    <label for="validationServerUsername "></label>
+                                    <div class="form-group">
+                                        <div class="input-group-prepend ">
+
+                                        </div>
+                                        <input placeholder="Correo electronico" type="email " class="form-control " [ngClass]="{'is-invalid': (email.errors?.pattern || email.errors?.required) && email.touched, 'is-valid' : email.valid }" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" id="validationServerUsername"
+                                            aria-describedby="inputGroupPrepend3 " name="email " [(ngModel)]="usuario.email " #email="ngModel" required>
+                                        <div class="invalid-feedback" *ngIf="email.errors?.required">
+                                            Es necesario ingresar un correo electrónico.
+                                        </div>
+                                        <div class=" invalid-feedback" *ngIf="email.errors?.pattern">
+                                            El correo electrónico es inválido.
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <label for="validationServer96 "></label>
+                                        <input placeholder="Nombre" type="text " class="form-control is-valid " [ngClass]="{'is-invalid' : (!nombre.valid && nombre.touched), 'is-valid' : nombre.valid}" id="validationServer96" name="nombre" [(ngModel)]="usuario.nombre " #nombre="ngModel"
+                                            required>
+                                        <div class="invalid-feedback ">
+                                            Favor de ingresar un nombre.
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="validationServer02 "></label>
+                                        <input placeholder="Primer Apellido" type="text " class="form-control is-valid " [ngClass]="{'is-invalid' : (!priApellido.valid && priApellido.touched), 'is-valid' : priApellido.valid}" id="validationServer02" name="priApellido" [(ngModel)]="usuario.priApellido " #priApellido="ngModel"
+                                            required>
+                                        <div class="invalid-feedback ">
+                                            Favor de ingresar el primer apellido.
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="validationServer069 "></label>
+                                        <input placeholder="Segundo Apellido" type="text " class="form-control is-valid " [ngClass]="{'is-invalid' : (!SegApellido.valid && SegApellido.touched), 'is-valid' : SegApellido.valid}" id="validationServer069" name="SegApellido" [(ngModel)]="usuario.SegApellido " #SegApellido="ngModel"
+                                            required>
+                                        <div class="invalid-feedback ">
+                                            Favor de ingresar el segundo apellido.
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="validationServer070 "></label>
+                                        <input name="password" id="password" tabindex="2" placeholder="Contraseña" type="password " class="form-control is-valid " [ngClass]="{'is-invalid' : (!password.valid && password.touched), 'is-valid' : password.valid}" id="validationServer070" name="password" [(ngModel)]="usuario.password " #password="ngModel"
+                                            required>
+                                        <div class="invalid-feedback ">
+                                            Favor de ingresar una contraseña.
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="validationServer071 "></label>
+                                        <input   placeholder="Confirmar contraseña" type="password " class="form-control is-valid " [ngClass]="{'is-invalid' : (!confirmPass.valid && confirmPass.touched), 'is-valid' : confirmPass.valid}" id="val1" name="confirmPass" [(ngModel)]="usuario.confirmPass " #confirmPass="ngModel"
+                                            required>
+                                        <div class="invalid-feedback ">
+                                            Favor de confirmar la contraseña.
+                                        </div>
+                                    </div>
+
+                                <div class="form-group">
+                                    <div class="row">
+                                        <div class="col-sm-6 col-sm-offset-3">
+                                            <button type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" value="Registrar">Registrar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
